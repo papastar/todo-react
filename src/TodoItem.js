@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './TodoItem.css'
 
 class TodoItem extends Component {
     constructor(props) {
@@ -7,9 +8,9 @@ class TodoItem extends Component {
 
     render() {
         return (
-            <div className='TodoItem'>
-                <p className='TodoItem-Text'>{this.props.item}</p>
-                <div className='TodoItem-delete' onClick={this.props.deleteItem}>-</div>
+            <div className='ToDoItem'>
+                <p className='ToDoItem-Text'>{this.props.item}</p>
+                <div className='ToDoItem-Delete' onClick={this.props.deleteItem}>-</div>
             </div>
         );
     }

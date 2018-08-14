@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Todo.css';
 import Logo from './asset/logo.png'
 import TodoItem from "./TodoItem";
 
@@ -16,10 +17,10 @@ class Todo extends Component {
 
     render() {
         return (
-            <div className='Todo'>
+            <div className='ToDo'>
                 <img src={Logo} className='Logo'/>
-                <h1 className='Todo-Header'>React to do</h1>
-                <div className='Todo-Container'>
+                <h1 className='ToDo-Header'>React to do</h1>
+                <div className='ToDo-Container'>
                     <div className='Todo-Content'>
                         {
                             this.state.todoList.map((item, key) => {
@@ -32,7 +33,7 @@ class Todo extends Component {
                     <input type='text' value={this.state.todoContent} onChange={this.handleInput}
                            onKeyPress={this.handleKeyPress}/>
                 </div>
-                <div className='Todo-Add' onClick={this.createNewTodo}>+</div>
+                <div className='ToDo-Add' onClick={this.createNewTodo}>+</div>
 
             </div>
         );
